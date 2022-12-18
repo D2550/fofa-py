@@ -43,7 +43,7 @@ class ClientTestCase(unittest.TestCase):
         self.assertEqual(data["mode"], "normal")
 
     def test_get_data_normal(self):
-        query = '''fofa.so'''
+        query = '''fofa.info'''
         data =  self.client.get_data(query )
         self.assertIn("results",data)
         self.assertIn("page", data)
@@ -64,7 +64,7 @@ class ClientTestCase(unittest.TestCase):
         self.assertEqual(data["mode"], "normal")
 
     def test_get_data_field(self):
-        query = '''host="fofa.so"'''
+        query = '''host="fofa.info"'''
         data = self.client.get_data(query,fields="host,title,ip,domain,port,country,city")
 
         self.assertIn("results", data)
@@ -88,7 +88,7 @@ class ClientTestCase(unittest.TestCase):
         self.assertEqual(len(data["results"][0]),7)
 
     def test_get_data_extended(self):
-        query = '''host="fofa.so"'''
+        query = '''host="fofa.info"'''
         data = self.client.get_data(query)
         self.assertIn("results", data)
         self.assertIn("page", data)
@@ -118,7 +118,7 @@ class ClientTestCase(unittest.TestCase):
 
     def test_get_data_page_error2(self):
         try:
-            query = '''fofa.so'''
+            query = '''fofa.info'''
             data = self.client.get_json_data(query, page="300")
         except:
             self.assertTrue(True)

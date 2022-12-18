@@ -5,10 +5,10 @@ from setuptools import setup
 setup(
     name = 'FOFA',
     version = '1.0.0',
-    description = 'Python library for FOFA (https://fofa.so)',
-    author = 'gcr',
-    author_email = 'yzjjaheim@163.com',
-    url = 'https://github.com/fofa-dev/FofaSDK-python',
+    description = 'Python library for FOFA (https://fofa.info)',
+    author = 'ccadmin',
+    author_email = 'ccadmin@88.com',
+    url = 'https://github.com/D2550/fofa-py',
     packages = ['fofa', 'fofa.poc', 'fofa.src'],
     classifiers = [
         'Intended Audience :: Developers',
